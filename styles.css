@@ -1,0 +1,187 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700;800;900&display=swap');
+
+:root {
+  --matte-black: #181915;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-decoration: none;
+}
+
+ul,
+li {
+  list-style-type: none;
+  list-style: none;
+}
+
+body {
+  background-image: url('/assets/images/gradient.png');
+  background-color: var(--matte-black);
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Header */
+
+.header {
+  padding: 1rem 4rem;
+}
+
+.header-logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.header img {
+  height: 2rem;
+  width: 2rem;
+  object-fit: contain;
+}
+
+.header h1 {
+  font-size: 1rem;
+  color: white;
+}
+
+.container {
+  height: 90vh;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Social Media */
+
+.socials {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.accounts {
+  background-color: var(--matte-black);
+  padding: 1rem;
+  border: 1px solid #ff4da6;
+  border-radius: 50%;
+}
+
+.accounts:hover {
+  opacity: 75%;
+}
+
+.accounts a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.accounts a img {
+  height: 1rem;
+  width: 1rem;
+  object-fit: contain;
+
+  filter: invert(100);
+}
+
+/* Hero Introduction */
+
+.hero-page {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.hero-intro {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.hero-name {
+  display: flex;
+  flex-direction: column;
+  align-items: left;
+}
+
+.hero-name .hi {
+  font-size: 2rem;
+  color: white;
+}
+
+.hero-name .my-name {
+  font-size: 6rem;
+  color: white;
+
+  -webkit-animation: glow 1s ease-in-out infinite alternate;
+  -moz-animation: glow 1s ease-in-out infinite alternate;
+  animation: glow 1s ease-in-out infinite alternate;
+}
+
+@-webkit-keyframes glow {
+  from {
+    text-shadow: 0 0 10px #fff, 0 0 20px #fff, 0 0 30px #e60073,
+      0 0 40px #e60073, 0 0 50px #e60073, 0 0 60px #e60073, 0 0 70px #e60073;
+  }
+  to {
+    text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6,
+      0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;
+  }
+}
+
+.hobbies {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.hobbies p {
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+}
+
+@media screen and (max-width: 767px) {
+  .container {
+    padding: 1rem;
+  }
+
+  .hero-page {
+    width: 100%;
+    padding: 1rem;
+  }
+
+  .hero-intro {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-name {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .hero-name .hi {
+    font-size: 2rem;
+    color: white;
+  }
+
+  .hero-name .my-name {
+    font-size: 3rem;
+    color: white;
+  }
+
+  .socials {
+    display: grid;
+    justify-content: center;
+    grid-template-columns: repeat(3, 0fr);
+    gap: 2rem;
+  }
+}
